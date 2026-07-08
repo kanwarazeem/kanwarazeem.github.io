@@ -11,12 +11,14 @@
     --primary-color: #4A90E2;
     --secondary-color: #2E5C8A;
     --accent-color: #F39C12;
+    --highlight-color: #27AE60;
     --text-color: #333;
     --light-text: #666;
     --light-bg: #F8F9FA;
     --white: #FFFFFF;
     --border-color: #E0E0E0;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s ease;
 }
 
@@ -84,6 +86,24 @@ a:hover {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-badge {
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
 
 .nav-menu {
@@ -96,10 +116,16 @@ a:hover {
     color: var(--text-color);
     font-weight: 500;
     transition: var(--transition);
+    position: relative;
 }
 
 .nav-link:hover {
     color: var(--primary-color);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 /* ============================================
@@ -110,6 +136,30 @@ a:hover {
     color: var(--white);
     padding: 120px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h1 {
@@ -121,6 +171,17 @@ a:hover {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    background: linear-gradient(120deg, var(--accent-color), #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content .title-secondary {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    opacity: 0.95;
 }
 
 .hero-content .subtitle {
@@ -154,6 +215,7 @@ a:hover {
 .btn-primary:hover {
     background-color: #E67E22;
     transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary {
@@ -182,8 +244,52 @@ section:nth-child(even) {
    About Section
    ============================================ */
 .about-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+}
+
+.current-role-highlight {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(243, 156, 18, 0.1));
+    border-left: 5px solid var(--highlight-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.badge-icon {
+    font-size: 1.1rem;
+}
+
+.current-role-highlight h3 {
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .about-content p {
@@ -199,10 +305,11 @@ section:nth-child(even) {
     border-radius: 10px;
     margin-top: 2rem;
     box-shadow: var(--shadow);
+    border-top: 4px solid var(--highlight-color);
 }
 
 .contact-info p {
-    margin: 0.5rem 0;
+    margin: 0.8rem 0;
     font-size: 1rem;
 }
 
@@ -229,6 +336,26 @@ section:nth-child(even) {
     box-shadow: var(--shadow);
     border-left: 5px solid var(--primary-color);
     transition: var(--transition);
+    position: relative;
+}
+
+.experience-item.current-role {
+    border-left: 5px solid var(--highlight-color);
+    background: linear-gradient(to right, rgba(39, 174, 96, 0.05), transparent);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
+}
+
+.role-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0 10px 0 10px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    animation: slideIn 0.6s ease-out;
 }
 
 .experience-item:hover,
@@ -251,6 +378,10 @@ section:nth-child(even) {
     margin-bottom: 0;
 }
 
+.experience-item.current-role h3 {
+    color: var(--highlight-color);
+}
+
 .date {
     background-color: var(--primary-color);
     color: var(--white);
@@ -258,6 +389,10 @@ section:nth-child(even) {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+}
+
+.experience-item.current-role .date {
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
 }
 
 .company,
@@ -288,6 +423,10 @@ section:nth-child(even) {
     font-weight: bold;
 }
 
+.experience-item.current-role .experience-list li:before {
+    color: var(--highlight-color);
+}
+
 /* ============================================
    Skills Section
    ============================================ */
@@ -295,7 +434,7 @@ section:nth-child(even) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -304,12 +443,37 @@ section:nth-child(even) {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.skill-category.featured {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(243, 156, 18, 0.1));
+    border: 2px solid var(--highlight-color);
+    box-shadow: 0 4px 20px rgba(39, 174, 96, 0.2);
+    grid-column: 1 / -1;
+}
+
+.category-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .skill-category h4 {
     color: var(--primary-color);
     margin-bottom: 1.2rem;
     font-size: 1.2rem;
+}
+
+.skill-category.featured h4 {
+    color: var(--highlight-color);
 }
 
 .skill-tags {
@@ -332,6 +496,18 @@ section:nth-child(even) {
 .skill-tag:hover {
     background-color: var(--primary-color);
     color: var(--white);
+    transform: translateY(-2px);
+}
+
+.skill-tag.featured-tag {
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+    background: rgba(39, 174, 96, 0.1);
+}
+
+.skill-tag.featured-tag:hover {
+    background-color: var(--highlight-color);
+    color: var(--white);
 }
 
 /* ============================================
@@ -352,6 +528,12 @@ section:nth-child(even) {
     box-shadow: var(--shadow);
     border-top: 4px solid var(--accent-color);
     text-align: center;
+    transition: var(--transition);
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .cert-item h4 {
@@ -416,6 +598,7 @@ section:nth-child(even) {
     border-radius: 5px;
     font-size: 0.9rem;
     font-weight: 600;
+    transition: var(--transition);
 }
 
 .project-link:hover {
@@ -550,6 +733,10 @@ section:nth-child(even) {
     section {
         padding: 60px 20px;
     }
+
+    .skill-category.featured {
+        grid-column: auto;
+    }
 }
 
 @media (max-width: 600px) {
@@ -583,5 +770,15 @@ section:nth-child(even) {
 
     .contact-methods {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .logo-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
     }
 }
