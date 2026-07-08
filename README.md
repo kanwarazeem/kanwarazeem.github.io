@@ -1,10 +1,11 @@
 # Kanwar Azeem - Professional Portfolio
 
-Welcome to my professional portfolio website! This is a comprehensive showcase of my IT expertise, professional experience, and technical skills.
+Welcome to my professional portfolio website! This is a comprehensive showcase of my IT expertise, professional experience, and technical skills as a Field Engineer and IT Professional.
 
 ## 🎯 About
 
-I'm an IT Technician and Network Administrator with hands-on experience in:
+I'm a **Field Engineer at HydroSun** with hands-on experience in:
+- **Field Engineering** - On-site support and equipment installation
 - **Network Operations Center (NOC)** support and monitoring
 - **IT Help Desk** services for Windows and Linux systems
 - **Embedded Systems** development and Arduino programming
@@ -17,7 +18,8 @@ This portfolio features:
 
 - **Professional Overview** - A comprehensive introduction to my background and goals
 - **Work Experience** - Detailed history of my roles and contributions:
-  - Helpdesk & Networking Team at Safe City, Islamabad (2024-Present)
+  - Field Engineer at HydroSun (2026-Present)
+  - Helpdesk & Networking Team at Safe City, Islamabad (2024-2025)
   - Assistant Engineer at Sabro Technologies (2023-2024)
   - Assistant Food Inspector at Punjab Food Authority (2023)
 
@@ -27,6 +29,7 @@ This portfolio features:
   - Matriculation (Science) from Punjab Public School
 
 - **Technical Skills**:
+  - **Field Engineering**: On-site support, equipment installation, maintenance
   - **Languages**: Python, C++, Bash Scripting
   - **Operating Systems**: Linux, Windows
   - **Networking**: Network administration, troubleshooting, connectivity
@@ -55,16 +58,21 @@ Visit my portfolio: **[kanwarazeem.github.io](https://kanwarazeem.github.io)**
 - **LinkedIn**: [linkedin.com/in/kanwar-azeem-4a6636267](https://www.linkedin.com/in/kanwar-azeem-4a6636267)
 - **GitHub**: [@kanwarazeem](https://github.com/kanwarazeem)
 - **Location**: Bhakkar, Punjab, Pakistan
+- **Current Role**: Field Engineer at HydroSun
 
 ## 🎓 Professional Summary
 
-As an entry-level technician supporting a Network Operations Center (NOC) and help desk, I am responsible for:
-- Monitoring server and network switch activity to ensure uptime
+Currently working as a **Field Engineer at HydroSun**, where I provide on-site technical support, equipment installation, and maintenance services. I have hands-on experience supporting Network Operations Centers (NOC), IT help desk services, and embedded systems development.
+
+As a skilled technician, I am responsible for:
+- Providing on-site technical support and troubleshooting
+- Installing and configuring field equipment
+- Monitoring server and network activity to ensure uptime
 - Troubleshooting connectivity issues
 - Diagnosing and resolving problems on Windows and Linux systems
 - Supporting IT infrastructure and maintaining system reliability
 
-I have a growth mindset and enjoy new challenges. I am particularly interested in cyber-security and look forward to leveraging my skills in network and systems administration to protect IT infrastructure.
+I have a growth mindset and enjoy new challenges. I am particularly interested in field engineering solutions, cybersecurity, and emerging IT technologies. I look forward to leveraging my skills in network and systems administration to deliver exceptional technical support and protect IT infrastructure.
 
 ## 🚀 Technologies Used
 
@@ -87,22 +95,23 @@ This portfolio website is built with:
 
 ## 📈 Career Goals
 
-- Expand expertise in network security and cybersecurity
-- Develop advanced Linux administration skills
+- Expand expertise in field engineering and on-site support solutions
+- Develop advanced cybersecurity and network security skills
+- Grow proficiency in field equipment maintenance and diagnostics
 - Contribute to open-source projects
-- Grow as a full-stack IT professional
-- Pursue advanced certifications in network management
+- Become a versatile IT professional with field engineering expertise
+- Pursue advanced certifications in network management and field engineering
 
 ## 📚 Learning & Development
 
 I'm committed to continuous learning and professional development:
 - Currently pursuing BS-IT degree
-- Active in hands-on project work
-- Staying updated with latest IT trends and technologies
-- Building practical experience in system administration
+- Active in hands-on field and project work
+- Staying updated with latest IT trends and field engineering technologies
+- Building practical experience in system administration and field support
 
 ---
 
 **© 2026 Kanwar Azeem** | All Rights Reserved
 
-*Built with dedication to IT excellence and continuous learning.*
+*Field Engineer | IT Professional | Built with dedication to excellence and continuous learning.*
